@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0ec20b3f-5d15-4ec3-860c-11f0e5ea9eed" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ConsultarPedidos.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.ClaseGUI05.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.ClaseGUI05.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ClaseGUI05.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../ClaseGUI05.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frmPrincipal.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/frmPrincipal.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frmPrincipal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/frmPrincipal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/Debug/ClaseGUI05.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/Debug/ClaseGUI05.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/Debug/ClaseGUI05.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/Debug/ClaseGUI05.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../obj/Debug/ClaseGUI05.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../obj/Debug/ClaseGUI05.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../obj/Debug/ClaseGUI05.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../obj/Debug/ClaseGUI05.csproj.GenerateResource.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../obj/Debug/ClaseGUI05.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../obj/Debug/ClaseGUI05.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../obj/Debug/ClaseGUI05.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../obj/Debug/ClaseGUI05.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../obj/Debug/ClaseGUI05.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../obj/Debug/ClaseGUI05.pdb" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1cNmWf7mZtmr9mwJy0N4baOAiKz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Rider.SolutionExplorerActivator" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TWShift.3" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ec20b3f-5d15-4ec3-860c-11f0e5ea9eed" name="Default Changelist" comment="" />
+      <created>1590377459206</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1590377459206</updated>
+      <workItem from="1590377467419" duration="28000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+</project>
