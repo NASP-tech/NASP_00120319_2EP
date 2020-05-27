@@ -22,7 +22,7 @@ namespace ClaseGUI05
             {
                 try
                 {
-                    var dt = Conexion.realizarConsulta($"SELECT prod.producto, ped.cantidad " +
+                    var dt = Connection.addQuery($"SELECT prod.producto, ped.cantidad " +
                                                        "FROM pedidos ped, inventario prod, usuario usu " +
                                                        $"WHERE ped.producto = prod.producto AND ped.idusuario = usu.usuario " +
                                                        $"AND ped.idusuario = '{txtUsuario.Text}'");

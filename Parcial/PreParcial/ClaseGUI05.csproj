@@ -109,7 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\Encriptador.cs" />
-    <Compile Include="Modelo\Conexion.cs" />
+    <Compile Include="Modelo\Connection.cs" />
     <Compile Include="Modelo\Frecuencia.cs" />
     <Compile Include="Modelo\FrecuenciaCompras.cs" />
     <Compile Include="Modelo\Inventario.cs" />
@@ -133,6 +133,12 @@
     </Compile>
     <Compile Include="Vista\AñadirPedido.Designer.cs">
       <DependentUpon>AñadirPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\CheckOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vista\CheckOrders.Designer.cs">
+      <DependentUpon>CheckOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="Vista\ConsultarPedidos.cs">
       <SubType>UserControl</SubType>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\AñadirPedido.resx">
       <DependentUpon>AñadirPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\CheckOrders.resx">
+      <DependentUpon>CheckOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\ConsultarPedidos.resx">
       <DependentUpon>ConsultarPedidos.cs</DependentUpon>

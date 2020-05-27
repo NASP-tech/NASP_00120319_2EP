@@ -11,7 +11,7 @@ namespace ClaseGUI05
         {
             string sql = "select * from inventario";
 
-            DataTable dt = Conexion.realizarConsulta(sql);
+            DataTable dt = Connection.addQuery(sql);
 
             List<Inventario> lista = new List<Inventario>();
             foreach (DataRow fila in dt.Rows)
@@ -33,7 +33,7 @@ namespace ClaseGUI05
                 "update inventario set descripcion='{1}', precio= '{2}' where producto='{0}';",
                 producto,nuevaDescripcion, cantidad);
             
-            Conexion.realizarAccion(sql);
+            Connection.addNonQuery(sql);
         }
 
         public static void crearNuevo(string producto, string descripcion, double precio)
@@ -44,7 +44,7 @@ namespace ClaseGUI05
                 "values('{0}', '{1}', '{2}', 0);",
                 producto, descripcion, precio);
             
-            Conexion.realizarAccion(sql);
+            Connection.addNonQuery(sql);
         }
 
        public static void eliminarProducto(string producto)
@@ -54,7 +54,7 @@ namespace ClaseGUI05
                 "delete from inventario where producto='{0}';",
                 producto);
             
-            Conexion.realizarAccion(sql);
+            Connection.addNonQuery(sql);
         }
         
        /* public static List<FrecuenciaCompras> getEstadisticas()

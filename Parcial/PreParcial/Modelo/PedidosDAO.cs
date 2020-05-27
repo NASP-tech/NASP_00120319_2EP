@@ -10,7 +10,7 @@ namespace ClaseGUI05
         {
             string sql = "select * from pedidos";
 
-            DataTable dp = Conexion.realizarConsulta(sql);
+            DataTable dp = Connection.addQuery(sql);
 
             List<Pedidos> lista = new List<Pedidos>();
             foreach (DataRow fila in dp.Rows)
@@ -31,7 +31,7 @@ namespace ClaseGUI05
                 "update inventario set descripcion='{1}' where producto='{2}';",
                 nuevaDescripcion, producto);
             
-            Conexion.realizarAccion(sql);
+            Connection.addNonQuery(sql);
         }
 
         public static void crearNuevo(string producto, string descripcion, double precio)
@@ -42,7 +42,7 @@ namespace ClaseGUI05
                 "values('{0}', '{1}', '{2}', 0);",
                 producto, descripcion, precio);
             
-            Conexion.realizarAccion(sql);
+            Connection.addNonQuery(sql);
         }
 
         public static void eliminarProducto(string producto)
@@ -52,7 +52,7 @@ namespace ClaseGUI05
                 "delete from inventario where producto='{0}';",
                 producto);
             
-            Conexion.realizarAccion(sql);
+            Connection.addNonQuery(sql);
         }
 
     }

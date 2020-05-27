@@ -3,12 +3,12 @@ using Npgsql;
 
 namespace ClaseGUI05
 {
-    public static class Conexion
+    public static class Connection
     {
         private static string CadenaConexion = 
             "Server=Localhost;Port=5432;User Id=postgres;Password=natalia.99;Database=bddEmpleados";
         
-        public static DataTable realizarConsulta(string sql)
+        public static DataTable addQuery(string sql)
         {
             NpgsqlConnection conn = new NpgsqlConnection(CadenaConexion);
             DataSet ds = new DataSet();
@@ -21,7 +21,7 @@ namespace ClaseGUI05
             return ds.Tables[0];
         }
 
-        public static void realizarAccion(string sql)
+        public static void addNonQuery(string sql)
         {
             NpgsqlConnection conn = new NpgsqlConnection(CadenaConexion);
             

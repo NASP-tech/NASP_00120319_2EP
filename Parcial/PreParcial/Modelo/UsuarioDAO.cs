@@ -12,7 +12,7 @@ namespace ClaseGUI05
         {
             string sql = "select * from usuario";
 
-            DataTable dt = Conexion.realizarConsulta(sql);
+            DataTable dt = Connection.addQuery(sql);
 
             List<Usuario> lista = new List<Usuario>();
             foreach (DataRow fila in dt.Rows)
@@ -34,7 +34,7 @@ namespace ClaseGUI05
                 "update usuario set contrasena='{0}' where usuario='{1}';",
                 nuevaContra, usuario);
             
-            Conexion.realizarAccion(sql);
+            Connection.addNonQuery(sql);
         }
 
         public static void crearNuevo(string usuario)
@@ -45,7 +45,7 @@ namespace ClaseGUI05
                 "values('{0}', '{1}', false, true);",
                 usuario, Encriptador.CrearMD5(usuario));
             
-            Conexion.realizarAccion(sql);
+            Connection.addNonQuery(sql);
         }
 
         public static void actualizarPermisos(string usuario, bool admin, bool activo)
@@ -54,7 +54,7 @@ namespace ClaseGUI05
                 "update usuario set admin={0}, activo={1} where usuario='{2}';",
                 admin ? "true" : "false", activo ? "true" : "false", usuario);
             
-            Conexion.realizarAccion(sql);
+            Connection.addNonQuery(sql);
         }
 
         public static void eliminar(string usuario)
@@ -64,7 +64,7 @@ namespace ClaseGUI05
                 "delete from usuario where usuario='{0}';",
                 usuario);
             
-            Conexion.realizarAccion(sql);
+            Connection.addNonQuery(sql);
         }
         
         public static List<Frecuencia> getEstadisticas()
@@ -74,7 +74,7 @@ namespace ClaseGUI05
                          "where entrar = true " +
                          "group by usuario;";
 
-            DataTable dt = Conexion.realizarConsulta(sql);
+            DataTable dt = Connection.addQuery(sql);
 
             List<Frecuencia> lista = new List<Frecuencia>();
             foreach (DataRow fila in dt.Rows)

@@ -20,7 +20,7 @@ namespace ClaseGUI05
                 "insert into registro(usuario, entrar) values ('{0}', {1});",
                 pUsuario, entra);
 
-            Conexion.realizarAccion(sql);
+            Connection.addNonQuery(sql);
         }
     }
 }

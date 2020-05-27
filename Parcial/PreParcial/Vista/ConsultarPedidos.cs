@@ -14,7 +14,7 @@ namespace ClaseGUI05
         {
             try
             {
-                var dt = Conexion.realizarConsulta($"SELECT * FROM pedidos");
+                var dt = Connection.addQuery($"SELECT * FROM pedidos");
 
                 dataGridView1.DataSource = dt;
                 MessageBox.Show("Datos obtenidos exitosamente");

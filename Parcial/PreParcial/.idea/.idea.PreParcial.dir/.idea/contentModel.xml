@@ -11,7 +11,7 @@
         <e p="Encriptador.cs" t="Include" />
       </e>
       <e p="Modelo" t="Include">
-        <e p="Conexion.cs" t="Include" />
+        <e p="Connection.cs" t="Include" />
         <e p="Frecuencia.cs" t="Include" />
         <e p="FrecuenciaCompras.cs" t="Include" />
         <e p="Inventario.cs" t="Include" />
@@ -44,6 +44,9 @@
         <e p="AñadirPedido.cs" t="Include" />
         <e p="AñadirPedido.Designer.cs" t="Include" />
         <e p="AñadirPedido.resx" t="Include" />
+        <e p="CheckOrders.cs" t="Include" />
+        <e p="CheckOrders.Designer.cs" t="Include" />
+        <e p="CheckOrders.resx" t="Include" />
         <e p="ConsultarPedidos.cs" t="Include" />
         <e p="ConsultarPedidos.Designer.cs" t="Include" />
         <e p="ConsultarPedidos.resx" t="Include" />

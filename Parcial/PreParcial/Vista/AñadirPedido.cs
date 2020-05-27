@@ -35,7 +35,7 @@ namespace ClaseGUI05
                                       $"'{cmbProductos.SelectedItem.ToString()}'," + 
                                       $"'{cmbUsuarios.SelectedItem.ToString()}')"; 
 
-                    Conexion.realizarAccion(nonQuery);
+                    Connection.addNonQuery(nonQuery);
 
                     MessageBox.Show("Se ha iniciado la orden de su pedido! Muchas gracias por preferirnos!!! :)");
 
@@ -52,7 +52,7 @@ namespace ClaseGUI05
 
         private void AñadirPedido_Load(object sender, EventArgs e)
         {
-            var usuarios = Conexion.realizarConsulta("SELECT usuario FROM usuario");
+            var usuarios = Connection.addQuery("SELECT usuario FROM usuario");
             var usuariosCombo = new List<string>();
 
             foreach (DataRow dr in usuarios.Rows)
@@ -62,7 +62,7 @@ namespace ClaseGUI05
 
             cmbUsuarios.DataSource = usuariosCombo;
 
-            var productos = Conexion.realizarConsulta("SELECT producto FROM inventario");
+            var productos = Connection.addQuery("SELECT producto FROM inventario");
             var productosCombo = new List<string>();
 
             foreach (DataRow dl in productos.Rows)
