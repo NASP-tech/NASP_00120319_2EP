@@ -1,0 +1,112 @@
+CREATE TABLE public.business
+(
+    idbusiness integer NOT NULL DEFAULT nextval('business_idbusiness_seq'::regclass),
+    businessname character varying(50) COLLATE pg_catalog."default" NOT NULL,
+    description text COLLATE pg_catalog."default",
+    CONSTRAINT pk_businessname PRIMARY KEY (businessname)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.business
+    OWNER to postgres;
+
+CREATE TABLE public.product
+(
+    idproduct integer NOT NULL DEFAULT nextval('product_idproduct_seq'::regclass),
+    productname character varying(50) COLLATE pg_catalog."default",
+    businessname character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT product_pkey PRIMARY KEY (idproduct),
+    CONSTRAINT fk_businessname FOREIGN KEY (businessname)
+        REFERENCES public.business (businessname) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.product
+    OWNER to postgres;
+-- Index: fki_fk_businessname
+
+-- DROP INDEX public.fki_fk_businessname;
+
+CREATE INDEX fki_fk_businessname
+    ON public.product USING btree
+    (businessname COLLATE pg_catalog."default" ASC NULLS LAST)
+    TABLESPACE pg_default;
+
+CREATE TABLE public.appuser
+(
+    iduser integer NOT NULL DEFAULT nextval('appuser_iduser_seq'::regclass),
+    fullname character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    username character varying(25) COLLATE pg_catalog."default" NOT NULL,
+    password character varying(32) COLLATE pg_catalog."default" NOT NULL,
+    administrator boolean NOT NULL,
+    CONSTRAINT appuser_pkey PRIMARY KEY (iduser),
+    CONSTRAINT appuser_username_key UNIQUE (username)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.appuser
+    OWNER to postgres;
+
+CREATE TABLE public.apporder
+(
+    idorder integer NOT NULL DEFAULT nextval('apporder_idorder_seq'::regclass),
+    username character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    idproduct integer NOT NULL,
+    createdate character varying(30) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT apporder_pkey PRIMARY KEY (idorder),
+    CONSTRAINT fk_username FOREIGN KEY (username)
+        REFERENCES public.appuser (username) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID,
+    CONSTRAINT fk_usernameid FOREIGN KEY (username)
+        REFERENCES public.appuser (username) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.apporder
+    OWNER to postgres;
+-- Index: fki_fk_usernameid
+
+-- DROP INDEX public.fki_fk_usernameid;
+
+CREATE INDEX fki_fk_usernameid
+    ON public.apporder USING btree
+    (username COLLATE pg_catalog."default" ASC NULLS LAST)
+    TABLESPACE pg_default;
+
+CREATE TABLE public.address
+(
+    idaddress integer NOT NULL DEFAULT nextval('address_idaddress_seq'::regclass),
+    address text COLLATE pg_catalog."default" NOT NULL,
+    username character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT address_pkey PRIMARY KEY (idaddress),
+    CONSTRAINT fk_username FOREIGN KEY (username)
+        REFERENCES public.appuser (username) MATCH SIMPLE
+        ON UPDATE NO ACTION
+        ON DELETE NO ACTION
+        NOT VALID
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.address
+    OWNER to postgres;
+-- Index: fki_fk_username
+
+-- DROP INDEX public.fki_fk_username;
+
+CREATE INDEX fki_fk_username
+    ON public.address USING btree
+    (username COLLATE pg_catalog."default" ASC NULLS LAST)
+    TABLESPACE pg_default;
